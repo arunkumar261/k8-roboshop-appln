@@ -22,20 +22,20 @@ spec:
       app: catalogue
       project: roboshop
       db : app
-template:
-  metadata:
-    labels:
-      app: catalogue
-      project: roboshop
-      db : app
-  spec:
-    containers:
-    - name: catalogue
-      image: narupallearun/catalogue:v1  
-      imagePullPolicy: Always
-      envFrom:
-      - ConfigMapRef:
-          name: catalogue
+  template:
+    metadata:
+      labels:
+        app: catalogue
+        project: roboshop
+        db : app
+    spec:
+      containers:
+      - name: catalogue
+        image: narupallearun/catalogue:v1  
+        imagePullPolicy: Always
+        envFrom:
+        - ConfigMapRef:
+            name: catalogue
 ---
 apiVersion: v1
 kind: Service
