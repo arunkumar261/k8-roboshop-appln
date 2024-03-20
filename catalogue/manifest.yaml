@@ -34,7 +34,7 @@ spec:
         image: narupallearun/catalogue:v1  
         imagePullPolicy: Always
         envFrom:
-        - ConfigMapRef:
+        - configMapRef:
             name: catalogue
 ---
 apiVersion: v1
