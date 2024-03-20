@@ -21,11 +21,11 @@ spec:
         app: mongodb
         project: roboshop
         tier: db
-  spec:
-    containers:
-    - name: mongodb
-      image: narupallearun/mongodb:v1
-      imagePullPolicy: Always
+    spec:
+      containers:
+      - name: mongodb
+        image: narupallearun/mongodb:v1
+        imagePullPolicy: Always
 ---
 apiVersion: v1 
 kind: Service
