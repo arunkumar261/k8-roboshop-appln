@@ -21,7 +21,7 @@ spec:
       tier: app
     spec:
       containers:
-        name: web
+      - name: web
         image: narupallearun/web:v1
         imagePullPolicy: Always
 
