@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  namespace: roboshop
+  labels:
+    app: web
+    project: roboshop
+    tier: app
+spec:
+  replicas: 1
+  selector::
+    matchLabels:
+      app: web
+      project: roboshop
+      tier: app
+  template:
+    metadata:
+      app: web
+      project: roboshop
+      tier: app
+  spec:
+    containers:
+      name: web
+      image: narupallearun/web:v1
+      imagePullPolicy: Always
+
+---
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name:  web
+  namespace: roboshop
+spec:
+  type: LoadBalancer
+  selector:
+    app: web
+    project: roboshop
+    tier: app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
