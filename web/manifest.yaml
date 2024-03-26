@@ -19,11 +19,11 @@ spec:
       app: web
       project: roboshop
       tier: app
-  spec:
-    containers:
-      name: web
-      image: narupallearun/web:v1
-      imagePullPolicy: Always
+    spec:
+      containers:
+        name: web
+        image: narupallearun/web:v1
+        imagePullPolicy: Always
 
 ---
 apiVersion: apps/v1
