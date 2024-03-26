@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: redis
-        image: narupallearun/redis:v1  
+        image: redis 
         imagePullPolicy: Always
         envFrom:
         - configMapRef:
