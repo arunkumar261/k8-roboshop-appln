@@ -45,6 +45,11 @@ spec:
       - name: mysql
         image: narupallearun/mysql:v1
         imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: mysql
+        - secretRef:
+            name: mysql
 ---
 apiVersion: v1 
 kind: Service
