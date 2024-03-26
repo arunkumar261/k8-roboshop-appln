@@ -16,9 +16,10 @@ spec:
       tier: app
   template:
     metadata:
-      app: web
-      project: roboshop
-      tier: app
+      labels:
+        app: web
+        project: roboshop
+        tier: app
     spec:
       containers:
       - name: web
